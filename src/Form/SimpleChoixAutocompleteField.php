@@ -10,7 +10,7 @@ use Symfony\UX\Autocomplete\Form\AsEntityAutocompleteField;
 use Symfony\UX\Autocomplete\Form\ParentEntityAutocompleteType;
 
 #[AsEntityAutocompleteField]
-class SimpleAutocompleteField extends AbstractType
+class SimpleChoixAutocompleteField extends AbstractType
 {
     public function configureOptions(OptionsResolver $resolver)
     {
@@ -18,7 +18,7 @@ class SimpleAutocompleteField extends AbstractType
             'class' => Choix::class,
             'placeholder' => 'Choose a Choix',
             'choice_label' => 'name',
-            'multiple' => true,
+            //'multiple' => true,
             'query_builder' => function(ChoixRepository $choixRepository) {
                 return $choixRepository->createQueryBuilder('choix');
             },

@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\ChoixRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Entity\Simple;
+use App\Entity\Multiple;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ChoixRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 #[ORM\Entity(repositoryClass: ChoixRepository::class)]
 class Choix
@@ -25,7 +27,7 @@ class Choix
     private $multiples;
 
     public function __construct()
-    {
+    {dd($this->simples);
         $this->simples = new ArrayCollection();
         $this->multiples = new ArrayCollection();
     }

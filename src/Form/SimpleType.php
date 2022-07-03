@@ -22,7 +22,7 @@ class SimpleType extends AbstractType
                 'placeholder' => 'Choisissez un nom dans la liste',
                 'autocomplete' => true,
             ])*/
-            ->add('choix', SimpleAutocompleteField::class)
+           ->add('choix', SimpleChoixAutocompleteField::class)
         ;
     }
 

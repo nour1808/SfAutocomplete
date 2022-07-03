@@ -17,7 +17,7 @@ class Simple
     #[ORM\Column(type: 'string', length: 255)]
     private $name;
 
-    #[ORM\ManyToOne(targetEntity: Choix::class, inversedBy: 'simples')]
+    #[ORM\ManyToOne(targetEntity: Choix::class, inversedBy: 'Simples')]
     private $choix;
 
     public function getId(): ?int
